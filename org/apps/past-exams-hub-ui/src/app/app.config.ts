@@ -5,10 +5,11 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideHttpClient } from '@angular/common/http';
 import { provideOAuthClient } from 'angular-oauth2-oidc';
 import { AuthenticationService } from './shared/services/authentication.service';
-import { environment } from '../environments/environment';
+//import { environment } from '../environments/environment';
 
 function configureAuth(authenticationService: AuthenticationService) {
-  return () => authenticationService.configureAuth(environment.authorityApiUrl);
+  const authorityApiUrl = 'http://localhost:5000';
+  return () => authenticationService.configureAuth(authorityApiUrl);
 }
 
 export const appConfig: ApplicationConfig = {
@@ -18,7 +19,7 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(),
     provideOAuthClient({
       resourceServer: {
-        allowedUrls: [environment.coreApiUrl],
+        allowedUrls: ['http://localhost:5002'],
         sendAccessToken: true,
       }
     }),

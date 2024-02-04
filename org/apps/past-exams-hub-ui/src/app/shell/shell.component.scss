@@ -3,31 +3,37 @@
 }
 
 .sidenav {
-  width: 200px;
+  width: 250px;
 }
 
 .sidenav .mat-toolbar {
   background: inherit;
 }
 
+.e-appbar-spacer {
+  margin-left: 14px !important;
+  margin-right: 24px !important;
+}
+
 .mat-toolbar.mat-primary {
   position: sticky;
   top: 0;
   z-index: 1;
+  background: #673ab7;
 }
 
 mat-list {
   mat-list-item {
     cursor: pointer;
     &:hover {
-      background: rgba(0, 0, 0, 0.04);
+      background-color: rgba(0, 0, 0, 0.04);
     }
   }
 }
 
 .active {
   background-color: #673ab7;
-  color: #fff;
+  color: #610b0b;
   &:hover {
     background: #673ab7 !important;
   }
