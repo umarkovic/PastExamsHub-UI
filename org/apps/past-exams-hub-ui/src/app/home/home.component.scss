@@ -1,0 +1,54 @@
+.grid-container {
+  padding: 16px;
+  height: calc(100vh - 64px);
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns with equal width */
+  grid-template-rows: auto; /* Rows height will be determined by content */
+  grid-template-areas: 'first second side'
+                        'third fourth side';
+  grid-gap: 1.5rem; /* Gutter size */
+
+  .grid-item {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Optional: Add additional styling here */
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
+  .grid-item-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Optional: Add additional styling here */
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
+  .first {
+    grid-area: first;
+  }
+
+  .second {
+    grid-area: second;
+  }
+
+  .third {
+    grid-area: third;
+  }
+
+  .fourth {
+    grid-area: fourth;
+  }
+
+  .side {
+    grid-area: side;
+  }
+}

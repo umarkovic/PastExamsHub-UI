@@ -15,3 +15,30 @@
   top: 0;
   z-index: 1;
 }
+
+mat-list {
+  mat-list-item {
+    cursor: pointer;
+    &:hover {
+      background: rgba(0, 0, 0, 0.04);
+    }
+  }
+}
+
+.active {
+  background-color: #673ab7;
+  color: #fff;
+  &:hover {
+    background: #673ab7 !important;
+  }
+  mat-icon {
+    color: #fff;
+  }
+  div {
+    color: #fff;
+  }
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}

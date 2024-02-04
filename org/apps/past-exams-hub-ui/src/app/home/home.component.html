@@ -1,0 +1,23 @@
+<div class="grid-container">
+  @for (studyYear of studyYears; track studyYear) {
+  <div
+    class="grid-item mat-elevation-z2"
+    [ngClass]="{
+      first: studyYear.year === 1,
+      second: studyYear.year === 2,
+      third: studyYear.year === 3,
+      fourth: studyYear.year === 4
+    }"
+    (click)="navigateToStudyYearCourses(studyYear.year)"
+  >
+    {{ studyYear.name }} godina
+  </div>
+  }
+  <!-- <div class="grid-item first mat-elevation-z2" (click)="navigateToStudyYearCourses()">I godina</div>
+    <div class="grid-item second mat-elevation-z2" (click)="navigateToStudyYearCourses()">II godina</div>
+    
+    <div class="grid-item third mat-elevation-z2" (click)="navigateToStudyYearCourses()">III godina</div>
+    <div class="grid-item fourth mat-elevation-z2" (click)="navigateToStudyYearCourses()">IV godina</div> -->
+
+  <div class="grid-item side mat-elevation-z2">nesto drugo</div>
+</div>
